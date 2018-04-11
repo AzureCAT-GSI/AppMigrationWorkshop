@@ -30,11 +30,18 @@ This hands-on-lab has the following exercises:
 
 ----
 
-For the purpose of this lab, we are going to create a .NET Core application.
+For the purpose of this lab, we are going to create a .NET Core application. You will do this from the jump box.
+
+1. If not already connected, remote into the jump box. See [HOL 2](./02-configure-source-apps/)
+
+1. Launch a PowerShell window
 
 1. Use the `dotnet` command below to create a new MVC application, restore dependencies, build, and run it.
 
-    ```bash
+    ```powershell
+    cd\
+    md dotnetapp
+    cd dotnetapp
     dotnet new mvc -f netcoreapp2.0
     dotnet restore
     dotnet build
@@ -55,7 +62,13 @@ For this HoL, we are going to use the template for [Deploying a Web App with cus
 
 > Note: While this template has a _"Deploy to Azure"_ button, we will be using it in our CI/CD pipeline.
 
-1. Download the _azuredeploy.json_ and _azuredeploy.paramaters.json_ file to your local directory.
+1. Download the _azuredeploy.json_ and _azuredeploy.paramaters.json_ file to your local directory. We will use PowerShell to pull the files locally
+
+    ````powershell
+    Invoke-WebRequest -Uri 'https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/101-webapp-custom-deployment-slots/azuredeploy.json'  -OutFile azuredeploy.json
+    Invoke-WebRequest -Uri 'https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/101-webapp-custom-deployment-slots/azuredeploy.parameters.json' -OutFile azuredeploy.parameters.json
+
+    ````
 
 1. Your local directory should look like the screenshot below.
 
@@ -71,9 +84,13 @@ Before adding new files, we will define files that we don't want to track in the
 
 1. Add the git ignore information on [https://raw.githubusercontent.com/OmniSharp/generator-aspnet/master/templates/gitignore.txt](https://raw.githubusercontent.com/OmniSharp/generator-aspnet/master/templates/gitignore.txt) page. It is template for ignoring C# build and working files from the repo.
 
+    ````powershell
+    Invoke-WebRequest -Uri 'https://raw.githubusercontent.com/OmniSharp/generator-aspnet/master/templates/gitignore.txt' -Outfile .gitignore
+    ````
+
 1. The code below will initiate the repo, add all the files to track, and commit them to the repo. From the root directory of the project:
 
-      ```bash
+      ```powershell
       git init
       git add -A
       git commit -m "Add initial files"
@@ -81,7 +98,7 @@ Before adding new files, we will define files that we don't want to track in the
 
 1. Connect the Git repo to VSTS. The following commands set the upstream directory and push the files to the remote repo.
 
-    ```bash
+    ```powershell
     git remote add origin <Your repo git url here>
     git push -u origin --all
     ```
@@ -114,7 +131,7 @@ With the code in VSTS, the CI/CD pipeline needs to be configured.
 
 1. Add the following to the _Arguments_ section of the publish task
 
-    ```bash
+    ```powershell
       --configuration $(BuildConfiguration) --output $(build.artifactstagingdirectory)
     ```
 

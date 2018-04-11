@@ -4,98 +4,76 @@ These hands on labs (HOLs) are intended to help developers and IT pros migrate a
 
 ---
 
-## HOL 1: Setting up the source environment
+## HOL 1: [Setting up the Azure environment](HOL/01-setup/README.md)
 
-Setting up your source environment for evaluating the sample applications.
-In this lab you will create the environment that will be used as the source for your legacy applications.
+In this lab you will create the environment that is needed for the workshop.
 
-* Configure the cloud services
-* Deploy the source environemnt to Azure
-* Inspect the source system
+* Run a custom ARM Template to scaffold the resources used during the training
 
-### View instructions for [HOL 1](./01-setup/README.md)
+----
 
----
+## HOL 2 - [Configure legacy Applications](HOL/02-configure-source-apps/README.md): 
 
-## HOL 2: Configure source applications
+In this lab you will inventory the sample applications.
 
-In this lab, you will install three sample legacy applications. The sample legacy applications will be used as the source for migrating to Azure.
+* Explore the sample applications
+* Gather information about the source applications
 
-Applications
+----
 
-* Timetracker
-* Classifieds
-* Jobs
+## HOL 3 - [Choose Migration Path](HOL/03-choose-migration-path/README.md): 
 
-### View instructions for [HOL 2](./02-configure-source-apps/README.md)
+In this lab you will review the legacy application, align the requirements to the different Azure offerings and provide a path for migration.
 
----
+* Provide possible treatments for the legacy applications
 
-## HOL 3: Inventory the target environment
+----
 
-This lab will introduce you to ...
+## HOL 4 -[DevOps with App Service](HOL/04-devops-w-app-service/README.md)
 
-* OBJECTIVE 1
-* OBJECTIVE 2
-* OBJECTIVE 2
+In this lab you will setup CI and CD with a simple application
 
-### View instructions for [HOL 3](HOL/03-inventory/README.MD)
+----
 
----
+### HOL 5 - [Migrate Source Apps to PaaS](HOL/05-deploy-to-paas/README.md)
 
-## HOL 4: Choose treatment
+In this lab you will use CI/CD with the sample legacy applications
 
-This lab will introduce you to ...
+----
 
-* OBJECTIVE 1
-* OBJECTIVE 2
-* OBJECTIVE 2
+## HOL 6 - [Windows Containers](HOL/06-windows-containers/README.md)
 
-### View instructions for [HOL 4](HOL/04-treatment/README.MD)
+In this lab you will learn how to set up Windows containers
 
----
+----
 
-## HOL 5: DevOps
+## HOL 6 (Supplemental) - [Advanced troubleshooting with Windows Containers](HOL/06-windows-containers/advanced-troubleshooting.md)
 
-This lab will introduce you to ...
+In this lab you will learn advanced techniques for working with Windows Containers
 
-* OBJECTIVE 1
-* OBJECTIVE 2
-* OBJECTIVE 2
+----
 
-### View instructions for [HOL 5](HOL/05-devops/)
+## HOL 7 - [Migrate Source Apps to Windows Containers](HOL/07-app-to-container/README.md): 
 
----
+In this lab you will learn how to containerize legacy applications
 
-## HOL 6: Migrate applications
+----
 
-This lab will introduce you to ...
+## HOL 8 - [DevOps with Containers](HOL/08-devops-w-containers/README.md): 
 
-* OBJECTIVE 1
-* OBJECTIVE 2
-* OBJECTIVE 2
+In this lab you will learn how to use CI/CD piplelines with Windows Containers
 
-### View instructions for [HOL 6](HOL/06-migrate/README.MD)
+----
 
----
+## HOL 9 - [Monitoring](HOL/09-monitoring-alerting/README.md): 
 
-## HOL 7: Monitor and extend
+In this lab you will enable monitoring for the legacy applications
 
-This lab will introduce you to ...
+----
 
-* OBJECTIVE 1
-* OBJECTIVE 2
-* OBJECTIVE 2
+## HOL 10 - [Going Live](HOL/10-going-live/README.md): 
 
-### View instructions for [HOL 7](HOL/07-monitor/README.MD)
-
----
-
-## Stretch HOLs
-
-ADD STRETCH HOLS HERE
-
-### View instructions for []()
+In this lab, you will use some Azure services to help with going live
 
 ---
 

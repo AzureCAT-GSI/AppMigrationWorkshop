@@ -97,8 +97,9 @@ In this lab you will use CI/CD with the sample legacy applications
 
 In this session, we will understand how Windows Containers can help with legacy workloads that require .NET and Windows integrated authentication.
 
-[View PowerPoint](Presentation/Module05-Authentication.pptx?raw=true)
-[View PowerPoint](Presentation/Module06-Windows-Containers.pptx?raw=true)
+[View PowerPoint - Module05-Authentication](Presentation/Module05-Authentication.pptx?raw=true)
+
+[View PowerPoint - Module06-Windows Containers](Presentation/Module06-Windows-Containers.pptx?raw=true)
 
 ### HOL 6 - [Windows Containers](HOL/06-windows-containers/README.md)
 
